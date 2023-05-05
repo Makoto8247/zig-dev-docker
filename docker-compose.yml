@@ -1,8 +1,16 @@
 version: '3'
 
 services:
-  zig-deb:
+  zig-dev:
     build: .
     volumes:
       - .:/myapp
     tty: true
+    stdin_open: true
+
+  zig-cli:
+    build: .
+    volumes:
+      - .:/myapp
+    tty: true
+    stdin_open: true
