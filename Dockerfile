@@ -1,6 +1,6 @@
 FROM ubuntu
 
-ARG file_version="0.11.0-dev.2983+f05cd008d.tar.xz"
+ARG file_version="0.11.0-dev.3003+e1f5ad3cc.tar.xz"
 
 #RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 379CE192D401AB61
 RUN apt update \
@@ -12,11 +12,5 @@ RUN apt update \
     && rm zig-linux-x86_64-${file_version} 
 
 ENV PATH $PATH:/zig
-
-RUN git clone https://github.com/nektro/zigmod
-
-WORKDIR /zigmod
-
-# RUN zig build .
 
 WORKDIR /myapp
